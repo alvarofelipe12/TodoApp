@@ -22,8 +22,19 @@ export function TaskItem({ task, onComplete, onDelete }: any) {
 };
 
 const styles = StyleSheet.create({
-  taskItem: { flexDirection: 'row', justifyContent: 'space-between', marginVertical: 10 },
-  taskText: { fontSize: 16, color: 'blue' },
+  taskItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+    borderRadius: 10,
+    padding: 15,
+    elevation: 3, // Android shadow
+    shadowColor: 'white',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4, // iOS shadow
+  },
+  taskText: { fontSize: 16 },
   completedText: { textDecorationLine: 'line-through', color: 'gray' },
   buttons: { flexDirection: 'row' },
   completeBtn: { marginRight: 15, color: 'green' },
